@@ -1,5 +1,6 @@
 package br.com.cesarsicas.watchmode.screens
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -19,7 +20,7 @@ fun ReleasesScreen(modifier: Modifier = Modifier) {
 }
 
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun ReleasesScreenPreview() {
     ReleasesScreen()
@@ -29,8 +30,13 @@ private fun ReleasesScreenPreview() {
 fun MovieGrid(movies: List<Movie>) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        modifier = Modifier.fillMaxSize().padding(4.dp)
-    ) {
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(2.dp),
+        horizontalArrangement = Arrangement.spacedBy(2.dp),
+        verticalArrangement = Arrangement.spacedBy(2.dp),
+
+        ) {
         items(movies.size) { index ->
             MoviePoster(movie = movies[index])
         }
