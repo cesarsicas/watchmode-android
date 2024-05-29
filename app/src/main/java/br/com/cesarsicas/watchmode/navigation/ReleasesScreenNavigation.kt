@@ -11,11 +11,11 @@ internal const val releasesListNavigationRoutes = "releases"
 
 
 fun NavGraphBuilder.releasesListScreen(
-    onNavigateToMovieDetails: (Movie) -> Unit
+    onMovieClick: (Movie) -> Unit
 ) {
 
     composable(releasesListNavigationRoutes) {
-        ReleasesScreen()
+        ReleasesScreen(onMovieClick = onMovieClick)
     }
 
 }

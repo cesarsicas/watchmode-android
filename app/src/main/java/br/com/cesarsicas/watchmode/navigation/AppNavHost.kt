@@ -13,17 +13,20 @@ fun AppNavHost(navController: NavHostController) {
 
     NavHost(
         navController = navController,
-        startDestination = releasesListNavigationRoutes){
+        startDestination = releasesListNavigationRoutes
+    ) {
 
         releasesListScreen(
-            onNavigateToMovieDetails = {
-
+            onMovieClick = {
+                navController.navigateToMovieDetails(it)
             }
         )
 
         searchScreen()
 
         favoritesScreen()
+
+        movieDetailsScreen()
 
     }
 
@@ -38,10 +41,12 @@ fun NavController.navigateSingleTopWithPopUpTo(
             releasesListNavigationRoutes,
             ::navigateToReleasesList
         )
+
         BottomAppBarItem.Search -> Pair(
             searchScreenRoute,
             ::navigateToSearchScreen
         )
+
         BottomAppBarItem.Favorites -> Pair(
             favoritesScreenRoute,
             ::navigateToFavoritesScreen

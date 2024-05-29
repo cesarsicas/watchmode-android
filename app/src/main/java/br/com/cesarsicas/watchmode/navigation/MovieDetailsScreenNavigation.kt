@@ -1,0 +1,23 @@
+package br.com.cesarsicas.watchmode.navigation
+
+import androidx.navigation.NavController
+import androidx.navigation.NavGraphBuilder
+import androidx.navigation.NavOptions
+import androidx.navigation.compose.composable
+import br.com.cesarsicas.watchmode.model.Movie
+import br.com.cesarsicas.watchmode.screens.MovieDetailsScreen
+
+internal const val movieDetailsScreenRoute = "movieDetails"
+
+fun NavGraphBuilder.movieDetailsScreen() {
+    composable(movieDetailsScreenRoute) {
+        MovieDetailsScreen()
+    }
+}
+
+fun NavController.navigateToMovieDetails(
+    movie: Movie,
+    navOptions: NavOptions? = null
+) {
+    navigate(movieDetailsScreenRoute, navOptions)
+}

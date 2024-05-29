@@ -15,8 +15,15 @@ import br.com.cesarsicas.watchmode.model.moviesSample
 
 
 @Composable
-fun ReleasesScreen(modifier: Modifier = Modifier) {
-    MovieGrid(moviesSample)
+fun ReleasesScreen(
+    modifier: Modifier = Modifier,
+    onMovieClick: (Movie) -> Unit = {}
+) {
+    MovieGrid(
+        moviesSample,
+        onMovieClick = onMovieClick
+    )
+
 }
 
 
@@ -27,7 +34,10 @@ private fun ReleasesScreenPreview() {
 }
 
 @Composable
-fun MovieGrid(movies: List<Movie>) {
+fun MovieGrid(
+    movies: List<Movie>,
+    onMovieClick: (Movie) -> Unit = {}
+) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         modifier = Modifier
@@ -38,7 +48,7 @@ fun MovieGrid(movies: List<Movie>) {
 
         ) {
         items(movies.size) { index ->
-            MoviePoster(movie = movies[index])
+            MoviePoster(movie = movies[index], onMovieClick = onMovieClick)
         }
     }
 }

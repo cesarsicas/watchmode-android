@@ -1,6 +1,7 @@
 package br.com.cesarsicas.watchmode.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -10,20 +11,23 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.cesarsicas.watchmode.R
 import br.com.cesarsicas.watchmode.model.Movie
 import br.com.cesarsicas.watchmode.model.moviesSample
-import coil.compose.AsyncImage
 
 @Composable
-fun MoviePoster(movie: Movie) {
+fun MoviePoster(
+    movie: Movie,
+    onMovieClick: (Movie) -> Unit
+) {
     Image(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .clickable {
+                onMovieClick(movie)
+            },
         contentScale = ContentScale.FillWidth,
         painter = painterResource(id = R.drawable.poster_sample),
         contentDescription = movie.title
     )
-//    AsyncImage(
-//        model = movie.poster,
-//        contentDescription = movie.title
-//    )
+
 //    AsyncImage(
 //        modifier = Modifier.fillMaxSize(),
 //        contentScale = ContentScale.FillWidth,
@@ -37,5 +41,5 @@ fun MoviePoster(movie: Movie) {
 @Preview
 @Composable
 private fun MoviePosterPreview() {
-    MoviePoster(movie = moviesSample.first())
+    MoviePoster(movie = moviesSample.first(),{})
 }
