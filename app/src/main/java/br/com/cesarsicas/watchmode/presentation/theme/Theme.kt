@@ -1,4 +1,4 @@
-package br.com.cesarsicas.watchmode.ui.theme
+package br.com.cesarsicas.watchmode.presentation.theme
 
 import android.app.Activity
 import android.os.Build

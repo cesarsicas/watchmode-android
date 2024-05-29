@@ -1,4 +1,4 @@
-package br.com.cesarsicas.watchmode.screens
+package br.com.cesarsicas.watchmode.presentation.screens
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

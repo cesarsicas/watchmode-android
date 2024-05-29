@@ -1,10 +1,10 @@
-package br.com.cesarsicas.watchmode.navigation
+package br.com.cesarsicas.watchmode.presentation.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import br.com.cesarsicas.watchmode.screens.SearchScreen
+import br.com.cesarsicas.watchmode.presentation.screens.SearchScreen
 
 internal const val searchScreenRoute = "search"
 

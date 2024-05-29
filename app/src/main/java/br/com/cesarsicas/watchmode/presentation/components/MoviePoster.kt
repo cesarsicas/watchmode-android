@@ -1,4 +1,4 @@
-package br.com.cesarsicas.watchmode.components
+package br.com.cesarsicas.watchmode.presentation.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

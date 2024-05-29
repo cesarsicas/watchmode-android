@@ -1,4 +1,4 @@
-package br.com.cesarsicas.watchmode.screens
+package br.com.cesarsicas.watchmode.presentation.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,18 +9,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.cesarsicas.watchmode.components.MoviePoster
+import br.com.cesarsicas.watchmode.presentation.components.MoviePoster
 import br.com.cesarsicas.watchmode.model.Movie
 import br.com.cesarsicas.watchmode.model.moviesSample
+import br.com.cesarsicas.watchmode.presentation.uistate.ReleasesUiState
 
 
 @Composable
 fun ReleasesScreen(
-    modifier: Modifier = Modifier,
+    uiState: ReleasesUiState,
     onMovieClick: (Movie) -> Unit = {}
 ) {
     MovieGrid(
-        moviesSample,
+        uiState.releases,
         onMovieClick = onMovieClick
     )
 
@@ -30,7 +31,7 @@ fun ReleasesScreen(
 @Preview(showBackground = true)
 @Composable
 private fun ReleasesScreenPreview() {
-    ReleasesScreen()
+    ReleasesScreen(uiState = ReleasesUiState(moviesSample))
 }
 
 @Composable

@@ -1,4 +1,4 @@
-package br.com.cesarsicas.watchmode
+package br.com.cesarsicas.watchmode.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,17 +20,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import br.com.cesarsicas.watchmode.components.BottomAppBar
-import br.com.cesarsicas.watchmode.components.BottomAppBarItem
-import br.com.cesarsicas.watchmode.components.bottomAppBarItems
-import br.com.cesarsicas.watchmode.navigation.AppNavHost
-import br.com.cesarsicas.watchmode.navigation.favoritesScreenRoute
-import br.com.cesarsicas.watchmode.navigation.navigateSingleTopWithPopUpTo
-import br.com.cesarsicas.watchmode.navigation.releasesListNavigationRoutes
-import br.com.cesarsicas.watchmode.navigation.searchScreenRoute
-import br.com.cesarsicas.watchmode.screens.ReleasesScreen
-import br.com.cesarsicas.watchmode.ui.theme.BackgroundColor
-import br.com.cesarsicas.watchmode.ui.theme.MyApplicationTheme
+import br.com.cesarsicas.watchmode.presentation.components.BottomAppBar
+import br.com.cesarsicas.watchmode.presentation.components.BottomAppBarItem
+import br.com.cesarsicas.watchmode.presentation.components.bottomAppBarItems
+import br.com.cesarsicas.watchmode.presentation.navigation.AppNavHost
+import br.com.cesarsicas.watchmode.presentation.navigation.favoritesScreenRoute
+import br.com.cesarsicas.watchmode.presentation.navigation.navigateSingleTopWithPopUpTo
+import br.com.cesarsicas.watchmode.presentation.navigation.releasesListNavigationRoutes
+import br.com.cesarsicas.watchmode.presentation.navigation.searchScreenRoute
+import br.com.cesarsicas.watchmode.presentation.screens.ReleasesScreen
+import br.com.cesarsicas.watchmode.presentation.theme.BackgroundColor
+import br.com.cesarsicas.watchmode.presentation.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -122,7 +122,7 @@ private fun WatchModeAppPreview() {
     MyApplicationTheme {
         Surface {
             WatchModeApp(content = {
-                ReleasesScreen()
+                ReleasesScreen(uiState = state)
             })
         }
     }

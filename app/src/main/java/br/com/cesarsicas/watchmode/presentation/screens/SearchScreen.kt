@@ -1,4 +1,4 @@
-package br.com.cesarsicas.watchmode.screens
+package br.com.cesarsicas.watchmode.presentation.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,8 +11,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.com.cesarsicas.watchmode.components.MoviesVerticalList
-import br.com.cesarsicas.watchmode.components.SearchTextField
+import br.com.cesarsicas.watchmode.presentation.components.MoviesVerticalList
+import br.com.cesarsicas.watchmode.presentation.components.SearchTextField
 import br.com.cesarsicas.watchmode.model.moviesSample
 
 @Composable

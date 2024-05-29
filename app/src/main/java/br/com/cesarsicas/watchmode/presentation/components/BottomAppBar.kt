@@ -1,4 +1,4 @@
-package br.com.cesarsicas.watchmode.components
+package br.com.cesarsicas.watchmode.presentation.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
-import br.com.cesarsicas.watchmode.ui.theme.MyApplicationTheme
+import br.com.cesarsicas.watchmode.presentation.theme.MyApplicationTheme
 
 sealed class BottomAppBarItem(
     val label: String,
