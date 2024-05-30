@@ -1,6 +1,5 @@
 package br.com.cesarsicas.watchmode.presentation.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -19,9 +18,10 @@ import androidx.compose.ui.unit.dp
 import br.com.cesarsicas.watchmode.R
 import br.com.cesarsicas.watchmode.domain.Movie
 import br.com.cesarsicas.watchmode.domain.moviesSample
+import coil.compose.AsyncImage
 
 @Composable
- fun MoviesVerticalList(movies: List<Movie>) {
+fun MoviesVerticalList(movies: List<Movie>) {
     LazyColumn(
         contentPadding = PaddingValues(horizontal = 4.dp),
 
@@ -30,18 +30,13 @@ import br.com.cesarsicas.watchmode.domain.moviesSample
         items(movies.size) { i ->
             Column {
                 Row {
-                    Image(
+                    AsyncImage(
                         modifier = Modifier.width(50.dp),
+                        model = movies[i].poster,
                         contentScale = ContentScale.FillWidth,
-                        painter = painterResource(id = R.drawable.poster_sample),
+                        placeholder = painterResource(id = R.drawable.poster_placeholder),
                         contentDescription = movies[i].title
                     )
-//                    AsyncImage(
-//                        modifier = Modifier.width(50.dp),
-//                        contentScale = ContentScale.FillWidth,
-//                        model = movies[i].poster,
-//                        contentDescription = movies[i].title
-//                    )
 
                     Text(modifier = Modifier.padding(start = 4.dp), text = movies[i].title)
                 }

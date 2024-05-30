@@ -7,7 +7,7 @@ class Repository() {
     private val service = watchModeApi.create(WatchModeService::class.java)
 
     suspend fun getReleases(): List<Movie> {
-        return service.getReleases(apiKey).map { it.toMovie() }
+        return service.getReleases(apiKey).releases.map { it.toMovie() }
     }
 
 }

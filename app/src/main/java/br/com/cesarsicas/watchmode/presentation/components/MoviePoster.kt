@@ -11,31 +11,24 @@ import androidx.compose.ui.tooling.preview.Preview
 import br.com.cesarsicas.watchmode.R
 import br.com.cesarsicas.watchmode.domain.Movie
 import br.com.cesarsicas.watchmode.domain.moviesSample
+import coil.compose.AsyncImage
 
 @Composable
 fun MoviePoster(
     movie: Movie,
     onMovieClick: (Movie) -> Unit
 ) {
-    Image(
+    AsyncImage(
         modifier = Modifier
             .fillMaxSize()
             .clickable {
                 onMovieClick(movie)
             },
+        model = movie.poster,
         contentScale = ContentScale.FillWidth,
-        painter = painterResource(id = R.drawable.poster_sample),
+        placeholder = painterResource(id = R.drawable.poster_placeholder),
         contentDescription = movie.title
     )
-
-//    AsyncImage(
-//        modifier = Modifier.fillMaxSize(),
-//        contentScale = ContentScale.FillWidth,
-//        model = movie.poster,
-//        contentDescription = movie.title
-//    )
-
-
 }
 
 @Preview
