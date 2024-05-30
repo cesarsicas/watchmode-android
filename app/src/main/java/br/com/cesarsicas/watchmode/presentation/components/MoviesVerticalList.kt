@@ -16,29 +16,29 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.cesarsicas.watchmode.R
-import br.com.cesarsicas.watchmode.domain.Movie
-import br.com.cesarsicas.watchmode.domain.moviesSample
+import br.com.cesarsicas.watchmode.domain.Title
+import br.com.cesarsicas.watchmode.domain.titlesSample
 import coil.compose.AsyncImage
 
 @Composable
-fun MoviesVerticalList(movies: List<Movie>) {
+fun MoviesVerticalList(titles: List<Title>) {
     LazyColumn(
         contentPadding = PaddingValues(horizontal = 4.dp),
 
         ) {
 
-        items(movies.size) { i ->
+        items(titles.size) { i ->
             Column {
                 Row {
                     AsyncImage(
                         modifier = Modifier.width(50.dp),
-                        model = movies[i].poster,
+                        model = titles[i].poster,
                         contentScale = ContentScale.FillWidth,
                         placeholder = painterResource(id = R.drawable.poster_placeholder),
-                        contentDescription = movies[i].title
+                        contentDescription = titles[i].title
                     )
 
-                    Text(modifier = Modifier.padding(start = 4.dp), text = movies[i].title)
+                    Text(modifier = Modifier.padding(start = 4.dp), text = titles[i].title)
                 }
                 Box(modifier = Modifier.height(6.dp))
             }
@@ -51,5 +51,5 @@ fun MoviesVerticalList(movies: List<Movie>) {
 @Preview
 @Composable
 private fun MoviesVerticalListPreview() {
-    MoviesVerticalList(movies = moviesSample)
+    MoviesVerticalList(titles = titlesSample)
 }

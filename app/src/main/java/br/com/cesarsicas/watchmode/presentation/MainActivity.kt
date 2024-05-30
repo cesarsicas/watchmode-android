@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import br.com.cesarsicas.watchmode.domain.moviesSample
+import br.com.cesarsicas.watchmode.domain.titlesSample
 import br.com.cesarsicas.watchmode.presentation.components.BottomAppBar
 import br.com.cesarsicas.watchmode.presentation.components.BottomAppBarItem
 import br.com.cesarsicas.watchmode.presentation.components.bottomAppBarItems
@@ -124,7 +124,7 @@ private fun WatchModeAppPreview() {
     MyApplicationTheme {
         Surface {
             WatchModeApp(content = {
-                ReleasesScreen(uiState = ReleasesUiState(releases = moviesSample))
+                ReleasesScreen(uiState = ReleasesUiState(releases = titlesSample))
             })
         }
     }

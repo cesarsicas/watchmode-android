@@ -18,7 +18,7 @@ fun AppNavHost(navController: NavHostController) {
 
         releasesListScreen(
             onMovieClick = {
-                navController.navigateToMovieDetails(it)
+                navController.navigateToTitleDetails(it.id)
             }
         )
 
@@ -26,7 +26,9 @@ fun AppNavHost(navController: NavHostController) {
 
         favoritesScreen()
 
-        movieDetailsScreen()
+        titleDetailsScreen(){
+            //navController.popBackStack()
+        }
 
     }
 

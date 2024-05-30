@@ -10,15 +10,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.cesarsicas.watchmode.presentation.components.MoviePoster
-import br.com.cesarsicas.watchmode.domain.Movie
-import br.com.cesarsicas.watchmode.domain.moviesSample
+import br.com.cesarsicas.watchmode.domain.Title
+import br.com.cesarsicas.watchmode.domain.titlesSample
 import br.com.cesarsicas.watchmode.presentation.uistate.ReleasesUiState
 
 
 @Composable
 fun ReleasesScreen(
     uiState: ReleasesUiState,
-    onMovieClick: (Movie) -> Unit = {}
+    onMovieClick: (Title) -> Unit = {}
 ) {
     MovieGrid(
         uiState.releases,
@@ -31,13 +31,13 @@ fun ReleasesScreen(
 @Preview(showBackground = true)
 @Composable
 private fun ReleasesScreenPreview() {
-    ReleasesScreen(uiState = ReleasesUiState(moviesSample))
+    ReleasesScreen(uiState = ReleasesUiState(titlesSample))
 }
 
 @Composable
 fun MovieGrid(
-    movies: List<Movie>,
-    onMovieClick: (Movie) -> Unit = {}
+    titles: List<Title>,
+    onMovieClick: (Title) -> Unit = {}
 ) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
@@ -48,8 +48,8 @@ fun MovieGrid(
         verticalArrangement = Arrangement.spacedBy(2.dp),
 
         ) {
-        items(movies.size) { index ->
-            MoviePoster(movie = movies[index], onMovieClick = onMovieClick)
+        items(titles.size) { index ->
+            MoviePoster(title = titles[index], onMovieClick = onMovieClick)
         }
     }
 }

@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.cesarsicas.watchmode.presentation.components.MoviesVerticalList
 import br.com.cesarsicas.watchmode.presentation.components.SearchTextField
-import br.com.cesarsicas.watchmode.domain.moviesSample
+import br.com.cesarsicas.watchmode.domain.titlesSample
 
 @Composable
 fun SearchScreen(searchText: String = "") {
@@ -36,12 +36,12 @@ fun SearchScreen(searchText: String = "") {
 
         val searchResult = remember(text) {
             if (text.isNotBlank()) {
-                moviesSample.filter { movie ->
+                titlesSample.filter { movie ->
                     movie.title.contains(
                         text,
                         ignoreCase = true,
                     ) ||
-                            movie.description?.contains(
+                            movie.plot?.contains(
                                 text,
                                 ignoreCase = true,
                             ) ?: false
@@ -49,7 +49,7 @@ fun SearchScreen(searchText: String = "") {
             } else emptyList()
         }
 
-        MoviesVerticalList(movies = searchResult)
+        MoviesVerticalList(titles = searchResult)
     }
 
 
