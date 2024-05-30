@@ -1,8 +1,8 @@
-package br.com.cesarsicas.watchmode.model
+package br.com.cesarsicas.watchmode.domain
 
 data class Movie(
     val title: String,
-    val poster: String,
+    val poster: String?,
     val description:String
 )
 

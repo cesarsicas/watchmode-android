@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.cesarsicas.watchmode.presentation.components.MoviesVerticalList
 import br.com.cesarsicas.watchmode.presentation.components.SearchTextField
-import br.com.cesarsicas.watchmode.model.moviesSample
+import br.com.cesarsicas.watchmode.domain.moviesSample
 
 @Composable
 fun SearchScreen(searchText: String = "") {

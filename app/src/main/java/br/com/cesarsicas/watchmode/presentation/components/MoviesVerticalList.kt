@@ -17,9 +17,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.cesarsicas.watchmode.R
-import br.com.cesarsicas.watchmode.model.Movie
-import br.com.cesarsicas.watchmode.model.moviesSample
-import coil.compose.AsyncImage
+import br.com.cesarsicas.watchmode.domain.Movie
+import br.com.cesarsicas.watchmode.domain.moviesSample
 
 @Composable
  fun MoviesVerticalList(movies: List<Movie>) {

@@ -9,8 +9,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import br.com.cesarsicas.watchmode.R
-import br.com.cesarsicas.watchmode.model.Movie
-import br.com.cesarsicas.watchmode.model.moviesSample
+import br.com.cesarsicas.watchmode.domain.Movie
+import br.com.cesarsicas.watchmode.domain.moviesSample
 
 @Composable
 fun MoviePoster(

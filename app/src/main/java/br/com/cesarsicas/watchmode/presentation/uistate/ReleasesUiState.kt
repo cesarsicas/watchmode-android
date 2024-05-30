@@ -1,6 +1,6 @@
 package br.com.cesarsicas.watchmode.presentation.uistate
 
-import br.com.cesarsicas.watchmode.model.Movie
+import br.com.cesarsicas.watchmode.domain.Movie
 
 data class ReleasesUiState(
     val releases: List<Movie> = emptyList(),
