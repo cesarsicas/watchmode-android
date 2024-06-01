@@ -24,8 +24,9 @@ fun MoviePoster(
             .clickable {
                 onMovieClick(title)
             },
-        model = title.poster?: painterResource(id = R.drawable.poster_placeholder),
+        model = title.poster,
         contentScale = ContentScale.FillWidth,
+        error = painterResource( R.drawable.poster_placeholder),
         placeholder = painterResource(id = R.drawable.poster_placeholder),
         contentDescription = title.title
     )
