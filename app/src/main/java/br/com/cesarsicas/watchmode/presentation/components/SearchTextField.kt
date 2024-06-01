@@ -29,10 +29,10 @@ fun SearchTextField(
             Icon(Icons.Default.Search, contentDescription = "ícone de lupa")
         },
         label = {
-            Text(text = "Filmes e séries")
+            Text(text = "Movies and TV Shows")
         },
         placeholder = {
-            Text("Digite o nome do filme ou série")
+            Text("What are you looking for?")
         })
 }
 

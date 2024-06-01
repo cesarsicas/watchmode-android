@@ -22,7 +22,9 @@ fun AppNavHost(navController: NavHostController) {
             }
         )
 
-        searchScreen()
+        searchScreen(){
+            navController.navigateToTitleDetails(it.id)
+        }
 
         favoritesScreen()
 

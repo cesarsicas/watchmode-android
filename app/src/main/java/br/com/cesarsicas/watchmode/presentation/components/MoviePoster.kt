@@ -14,16 +14,17 @@ import coil.compose.AsyncImage
 
 @Composable
 fun MoviePoster(
+    modifier: Modifier = Modifier,
     title: Title,
     onMovieClick: (Title) -> Unit
 ) {
     AsyncImage(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .clickable {
                 onMovieClick(title)
             },
-        model = title.poster,
+        model = title.poster?: painterResource(id = R.drawable.poster_placeholder),
         contentScale = ContentScale.FillWidth,
         placeholder = painterResource(id = R.drawable.poster_placeholder),
         contentDescription = title.title
@@ -33,5 +34,8 @@ fun MoviePoster(
 @Preview
 @Composable
 private fun MoviePosterPreview() {
-    MoviePoster(title = titlesSample.first(),{})
+    MoviePoster(
+        modifier = Modifier,
+        title = titlesSample.first()
+    ) {}
 }

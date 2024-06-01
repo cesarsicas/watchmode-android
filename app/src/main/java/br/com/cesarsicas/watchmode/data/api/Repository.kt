@@ -14,4 +14,9 @@ class Repository() {
         return service.getTitleDetails(titleId, apiKey).toTitle()
     }
 
+    suspend fun getSearch(search: String): List<Title> {
+        return service.getSearch(apiKey, search).results.map { it.toTitle() }
+    }
 }
+
+

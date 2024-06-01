@@ -12,5 +12,5 @@ private fun FavoritesScreenPreview() {
 
 @Composable
 fun FavoritesScreen() {
-    Text(text = "FavoritesScreen")
+    Text(text = "FavoritesScreen soon :)")
 }

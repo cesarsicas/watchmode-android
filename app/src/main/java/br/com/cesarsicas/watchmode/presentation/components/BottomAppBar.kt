@@ -24,12 +24,12 @@ sealed class BottomAppBarItem(
     )
 
     object Search : BottomAppBarItem(
-        label = "Buscar",
+        label = "Search",
         icon = Icons.Filled.Search
     )
 
     object Favorites : BottomAppBarItem(
-        label = "Favoritos",
+        label = "Favorites",
         icon = Icons.Outlined.Star
     )
 

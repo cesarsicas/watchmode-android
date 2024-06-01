@@ -1,6 +1,7 @@
 package br.com.cesarsicas.watchmode.data.api
 
 import br.com.cesarsicas.watchmode.data.model.ReleaseSuccessResponse
+import br.com.cesarsicas.watchmode.data.model.SearchSuccessResponse
 import br.com.cesarsicas.watchmode.data.model.TitleDetailsSuccessResponse
 import br.com.cesarsicas.watchmode.domain.Title
 
@@ -32,5 +33,20 @@ fun TitleDetailsSuccessResponse.toTitle(): Title {
         userRating = user_rating,
         criticScore = critic_score
     )
-
 }
+
+fun SearchSuccessResponse.Result.toTitle(): Title {
+    return Title(
+        id = id,
+        title = name,
+        poster = image_url,
+        plot = null,
+        year = null,
+        endYear = null,
+        genreNames = null,
+        userRating = null,
+        criticScore = null
+    )
+}
+
+
