@@ -1,5 +1,9 @@
 # Android App with Jetpack Compose, Navigation, and Watchmode API
 
+
+https://github.com/cesarsicas/watchmode-android/assets/7783112/97d08289-bc09-4f9d-84d8-05c5bb7c9144
+
+
 ## Table of Contents
 
 * [About](#about)
@@ -10,8 +14,6 @@
 * [Architecture](#architecture)
 * [Navigation](#navigation)
 * [API Consumption](#api-consumption)
-* [Contributing](#contributing)
-* [License](#license)
 
 ## About
 
