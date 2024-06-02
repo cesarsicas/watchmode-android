@@ -40,7 +40,7 @@ fun MoviesVerticalList(titles: List<Title>,
                         modifier = Modifier.width(50.dp),
                         model = titles[i].poster,
                         contentScale = ContentScale.FillWidth,
-                        placeholder = painterResource(id = R.drawable.poster_placeholder),
+                        placeholder = painterResource(id = R.drawable.new_placeholder),
                         contentDescription = titles[i].title
                     )
 

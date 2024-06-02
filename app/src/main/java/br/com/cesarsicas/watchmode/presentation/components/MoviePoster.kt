@@ -26,8 +26,8 @@ fun MoviePoster(
             },
         model = title.poster,
         contentScale = ContentScale.FillWidth,
-        error = painterResource( R.drawable.poster_placeholder),
-        placeholder = painterResource(id = R.drawable.poster_placeholder),
+        error = painterResource( R.drawable.new_placeholder),
+        placeholder = painterResource(id = R.drawable.new_placeholder),
         contentDescription = title.title
     )
 }
